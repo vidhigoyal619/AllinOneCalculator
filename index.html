@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator" id="calculator">
+        <div class="display">
+            <input type="text" id="output" readonly>
+        </div>
+        <div class="buttons">
+            <button class="number" onclick="appendToOutput('7')">7</button>
+            <button class="number" onclick="appendToOutput('8')">8</button>
+            <button class="number" onclick="appendToOutput('9')">9</button>
+            <button class="number" onclick="appendToOutput('4')">4</button>
+            <button class="number" onclick="appendToOutput('5')">5</button>
+            <button class="number" onclick="appendToOutput('6')">6</button>
+            <button class="number" onclick="appendToOutput('1')">1</button>
+            <button class="number" onclick="appendToOutput('2')">2</button>
+            <button class="number" onclick="appendToOutput('3')">3</button>
+            <button class="number" onclick="appendToOutput('0')">0</button>
+            <button class="number1" onclick="handleInput('.')">.</button>
+            <button class="operation" onclick="clearOutput()">C</button>
+            <button class="operation" onclick="appendToOutput('+')">+</button>
+            <button class="operation" onclick="appendToOutput('-')">-</button>
+            <button class="operation" onclick="appendToOutput('*')">*</button> 
+            <button class="operation" onclick="calculate()">=</button>
+            <button class="operation" onclick="appendToOutput('/')">/</button>
+            <button class="conversion" onclick="convertToDecimal()">Bin to Dec</button>
+            <button class="conversion" onclick="convertToOctal()">Bin to Oct</button>
+            <button class="conversion" onclick="convertToHex()">Bin to Hex</button>
+            <button class="conversion" onclick="convertToBinary()">Dec to Bin</button>
+            <button class="conversion" onclick="convertToOctal()">Dec to Oct</button>
+            <button class="conversion" onclick="convertOctalToBinary()">Oct to Bin</button>
+            <button class="conversion" onclick="convertToFahrenheit()">C to F</button>
+            <button class="conversion" onclick="convertToCelsius()">F to C</button>
+            <button class="operation" onclick="calculateOnesComplement()">1's Complement</button>
+            <button class="operation" onclick="calculateTwosComplement()">2's Complement</button>
+            <button class="operation" onclick="calculateSine()">sin(deg)</button>
+            <button class="operation" onclick="calculateCosine()">cos(deg)</button>
+            <button class="operation" onclick="calculateTangent()">tan(deg)</button>
+            <button class="operation" onclick="calculateSineRadians()">sin(rad)</button>
+            <button class="operation" onclick="calculateCosineRadians()">cos(rad)</button>
+            <button class="operation" onclick="calculateTangentRadians()">tan(rad)</button>
+            <select id="sizeConversionOption">
+                <option value="usToUk">US to UK</option>
+                <option value="ukToUs">UK to US</option>
+                <option value="euToUs">EU to US</option>
+                <option value="usToEu">US to EU</option>
+                <option value="ukToEu">UK to EU</option>
+                <option value="euToUk">EU to UK</option>
+                <option value="usToIn">US to Indian</option>
+            </select>
+            <button class="conversion" onclick="convertClothingSize()">Convert Size</button>
+            <button class="operation" onclick="calculateFactorial()">!</button>
+</div>
+    </div>    
+    <script src="script.js"></script>
+</body>
+</html>

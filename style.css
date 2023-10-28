@@ -1,0 +1,97 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f2f2f2;
+}
+
+.calculator {
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    width: 500px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.display {
+    padding: 15px;
+}
+
+input[type="text"] {
+    width: 100%;
+    font-size: 20px;
+    border: none;
+    background: none;
+    color: white;
+    outline: none;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 10px;
+}
+
+button{
+    border: none;
+    background: #555;
+    color: white;
+    font-size: 18px;
+    padding: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #777;
+}
+
+button.number, button.operation{
+    grid-column: span 1;
+}
+button.number1{
+    font-size: 1rem;
+    font-weight: 800;
+}
+button.operation, button.conversion{
+    background: #f44336;
+}
+
+button.conversion:hover,
+ button.operation:hover
+ {
+    background: #ff6659;
+}
+
+#sizeConversionOption {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #666;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+
+#sizeConversionOption option {
+    background-color: #666;
+    color: #fff;
+    font-size: 16px;
+}
+
+#sizeConversionOption:hover {
+    border-color: #555;
+}
+
+/* Style for when the dropdown is open */
+#sizeConversionOption:focus {
+    border-color: #555;
+    box-shadow: 0 0 5px rgba(85, 85, 85, 0.5);
+}
